@@ -10,9 +10,9 @@ Please report any issues and/or participate in the development [here](https://tr
 ### Get trello4j from unofficial maven repo
 
     <repository>
-	    <id>joelso-mvn-repo</id>
-	    <name>joelso github mvn repo</name>
-	    <url>https://raw.github.com/joelso/joelso-mvn-repo/master/snapshots/</url>
+	    <id>edneyego-mvn-repo</id>
+	    <name>edneyego github mvn repo</name>
+	    <url>https://raw.github.com/edneyego/edneyego-mvn-repo/master/snapshots/</url>
 	</repository>
 	
 	...
@@ -20,13 +20,13 @@ Please report any issues and/or participate in the development [here](https://tr
 	<dependency>
 	    <groupId>org.trello4j</groupId>
 		<artifactId>trello4j</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0-1</version>
 	</dependency>
 	
 
 ### Get source and build it
 
-    git clone git@github.com:joelso/trello4j.git
+    git clone git@github.com:edneyego/trello4j.git
 	cd trello4j
 	mvn install
 
