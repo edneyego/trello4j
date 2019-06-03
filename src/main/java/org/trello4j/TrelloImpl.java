@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import org.trello4j.model.*;
 import org.trello4j.model.Board.Prefs;
 import org.trello4j.model.Card.Attachment;
+import org.trello4j.model.Card.Label;
 import org.trello4j.model.Checklist.CheckItem;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -1273,5 +1274,19 @@ public class TrelloImpl implements Trello {
 		} else {
 			return new BufferedInputStream(is);
 		}
+	}
+
+	@Override
+	public List<Label> getLabelsByBoard(String boardId,final String... filter) {
+		validateObjectId(boardId);
+
+		final String url = TrelloURL
+				.create(apiKey, TrelloURL.LABELS, boardId)
+				.token(token)
+				.filter(filter)
+				.build();
+
+		return trelloObjFactory.createObject(new TypeToken<List<Label>>() {
+		}, doGet(url));
 	}
 }

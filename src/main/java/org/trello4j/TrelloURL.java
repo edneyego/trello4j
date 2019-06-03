@@ -66,6 +66,8 @@ public class TrelloURL {
 	public static final String TOKEN_WEBHOOKS_URL = "https://api.trello.com/1/tokens/{0}/webhooks";
 	public static final String WEBHOOKS_URL = "https://api.trello.com/1/webhooks/";
 	public static final String WEBHOOKS_ID_URL = "https://api.trello.com/1/webhooks/{0}";
+
+	public static final String LABELS = "https://api.trello.com/1/labels/{0}";
 	private static final String PATH_PARAM_ARG_PREFIX = "\\{";
 	private static final String PATH_PARAM_ARG_SUFFIX = "\\}";
 	private static final String KEY_QUERY_PARAM = "?key=";
